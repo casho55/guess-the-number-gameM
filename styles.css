@@ -7,10 +7,6 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ensure full viewport height */
     margin: 0;
     overflow-y: auto; /* Enable vertical scrolling */
     background-color: #f0f0f0;
@@ -213,13 +209,5 @@ body {
     .container {
         width: 90%;
         max-width: none;
-    }
-    
-    #input-name-container {
-        margin-bottom: 10px;
-    }
-    
-    #set-name-button {
-        margin-top: 10px;
     }
 }
