@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game 🎲💰</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme">
+    <div class="background">
+        <!-- Input Name Container -->
+        <div id="input-name-container">
+            <label for="player-name">Enter Your Name:</label>
+            <input type="text" id="player-name" placeholder="Enter your name">
+            <button id="set-name-button">Set Name</button>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h1>CASHO 🏦</h1>
+            <div class="balance-box">
+                <h3>Balance 💰</h3>
+                <p id="current-balance">0</p>
+            </div>
+            <form id="add-money-form">
+                <label for="add-money-input">Add Money 💵:</label>
+                <input type="number" id="add-money-input" min="0" placeholder="Enter amount">
+                <button type="submit">Add</button>
+            </form>
+            <div class="button-container">
+                <button class="amount-button" data-amount="50000">💵 50k</button>
+                <button class="amount-button" data-amount="100000">💰 100k</button>
+                <button class="amount-button" data-amount="200000">💸 200k</button>
+                <button class="amount-button" data-amount="300000">💲 300k</button>
+                <button class="amount-button" data-amount="400000">💵 400k</button>
+                <button class="amount-button" data-amount="500000">💰 500k</button>
+                <button class="amount-button" data-amount="1000000">💵 1M</button>
+            </div>
+        </div>
+        
+        <!-- Main Container -->
+        <div class="container">
+            <header>
+                <h2>Guess the Number Game 🎲</h2>
+                <h5 id="profitStatement">Your amount is <span id="profitAmount">a</span></h5>
+            </header>
+            <section>
+                <h3>Instructions 📝</h3>
+                <p>I'm thinking of a number between 1 and 100. You have 5 attempts to guess it.</p>
+            </section>
+            <section>
+                <h3>Enter Your Guess 🔢</h3>
+                <input type="number" id="guess" min="1" max="100" placeholder="Enter your guess" disabled>
+                <button id="guess-button" disabled>Guess 🎯</button>
+            </section>
+            <section id="game-results">
+                <h3>Game Results 🎉</h3>
+                <p id="message"></p>
+                <p id="attempts"></p>
+            </section>
+        </div>
+        
+        <!-- Winners Dashboard -->
+        <div class="winners-dashboard">
+            <h2>Winners 🏆</h2>
+            <ul id="winners-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
