@@ -7,18 +7,14 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    overflow-y: auto; /* Enable vertical scrolling */
-    background-color: #f0f0f0;
-    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 128, 0, 0.1) 10px, rgba(0, 128, 0, 0.5) 20px, rgba(255, 255, 1, 1));
+    background-color: #f0f0f0; /* Fallback background color */
 }
 
 .background {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
 }
 
 /* Input Name Container */
@@ -39,18 +35,17 @@ body {
     padding: 12px 24px;
     font-size: 18px;
     cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
     border: none;
-    border-radius: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: background-color 0.3s, transform 0.2s;
-    margin-top: 10px; /* Adjusted margin for mobile */
 }
 
 #set-name-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
 }
 
 /* Sidebar Styles */
@@ -58,7 +53,7 @@ body {
     width: 100%;
     max-width: 300px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust opacity for better visibility */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
@@ -71,8 +66,8 @@ body {
 }
 
 .balance-box {
-    background-color: #ffffff;
-    color: #333333;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text color */
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -102,9 +97,9 @@ body {
     margin-bottom: 8px;
     font-size: 14px;
     cursor: pointer;
-    background-color: #ffffff;
-    color: #333333;
-    border: 1px solid #cccccc;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text color */
+    border: 1px solid #cccccc; /* Light gray border */
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     width: 100%;
@@ -112,17 +107,18 @@ body {
 }
 
 .button-container button:hover {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Light gray background on hover */
 }
 
 /* Main Container Styles */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 600px;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust opacity for better visibility */
+    margin-bottom: 20px;
 }
 
 .container header {
@@ -156,7 +152,7 @@ body {
     font-size: 16px;
     margin-top: 10px;
     width: 100%;
-    border: 1px solid #cccccc;
+    border: 1px solid #cccccc; /* Light gray border */
     border-radius: 5px;
     transition: border-color 0.3s;
 }
@@ -164,7 +160,7 @@ body {
 .container input[type="number"]:focus,
 .container button:focus {
     outline: none;
-    border-color: #aaaaaa;
+    border-color: #aaaaaa; /* Lighter gray on focus */
 }
 
 /* Winners Dashboard Styles */
@@ -172,9 +168,9 @@ body {
     width: 100%;
     max-width: 300px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust opacity for better visibility */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .winners-dashboard h2 {
@@ -201,13 +197,8 @@ body {
 
 /* Media Queries for Mobile */
 @media (max-width: 600px) {
-    .sidebar, .winners-dashboard {
-        width: 90%;
-        max-width: none;
-        margin-bottom: 20px;
-    }
-    .container {
-        width: 90%;
+    .sidebar, .winners-dashboard, .container {
+        width: 100%;
         max-width: none;
     }
 }
