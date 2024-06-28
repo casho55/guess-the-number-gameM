@@ -92,10 +92,10 @@ document.getElementById('guess-button').addEventListener('click', function() {
         message = `Congratulations, ${playerName}! You guessed the number in ${attempts} attempts and won ${formatAmount(winnings)}!`;
         saveWinner(playerName);
         updateBalanceDisplay();
-        setTimeout(resetGame, 3000);  // Reset the game after 3 seconds
+        setTimeout(resetGame, 100);  // Reset the game after 3 seconds
     } else if (attempts >= maxAttempts) {
         message = `Sorry, ${playerName}. You've used all ${maxAttempts} attempts. The number was ${secretNumber}.`;
-        setTimeout(resetGame, 3000);  // Reset the game after 3 seconds
+        setTimeout(resetGame, 100);  // Reset the game after 3 seconds
     } else if (guess < secretNumber) {
         message = 'Too low. Try again!';
     } else if (guess > secretNumber) {
